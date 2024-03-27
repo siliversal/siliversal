@@ -1,0 +1,70 @@
+/* Slideshow */
+
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1352px;
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+  }
+  
+
+ 
+  
+  /* Buttons */
+  
+  .slideshowDots {
+    text-align: center;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  
+  .slideshowDot.active {
+    background-color: #1e6bab;
+  }
+
+  .slide {
+    display: inline-block;
+    width: 100%;
+  }
+
+@media only screen and (min-width: 320px) and (max-width: 420px)  {
+      .slide {
+        height: 160px;
+      }
+    }
+
+@media only screen and (min-width: 420px) and (max-width: 600px)  {
+        .slide {
+          height: 250px;
+        }
+      }
+@media only screen and (min-width: 600px) and (max-width: 767px)  {
+  .slide {
+    height: 310px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+  .slide {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 5361px)  {
+  .slide {
+    height: 534px;
+  }
+}
