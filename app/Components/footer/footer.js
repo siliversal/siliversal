@@ -1,10 +1,17 @@
-import React, {Fragment} from 'react';
+'use client'
+
+
+import React, {Fragment, useState} from 'react';
 import Logo from '../logo/logofooter';
 import Menu from '../menus/menu';
-import Whychoose from '../whychoose/whychoose';
 import FooterMenu from '../menus/footerMenus';
 
+
 const Footer = () => {
+  const [email, setEmail] = useState(' contact@siliversal.com');
+  const copyEmailToClipboard = () => {
+    navigator.clipboard.writeText(email);
+  }
   return (
     <Fragment>
 
@@ -19,7 +26,10 @@ const Footer = () => {
               INDIA
               <br />
               <br />
-              <b>Email:</b> contact@siliversal.com<br />
+              <b className='float-left pr-1'>Email: </b>
+             
+              <span className='float-left'> {email}</span> <i className="fa-solid fa-copy float-left copy" onClick={copyEmailToClipboard}><img src='./images/copy.png'/></i>
+              <br />
               <b>Phone:</b> +91 7483433274 <br />
             </p>
             <p className="copyrights">© Siliversal Copyrights</p>
@@ -83,8 +93,6 @@ const Footer = () => {
             </div>
             <Logo />
           </div>
-
-          
 
         </div>
       </section>

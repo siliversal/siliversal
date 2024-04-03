@@ -16,7 +16,7 @@ const ExportProducts = () => {
   return (
     <Fragment>
       <section className="max-w-6xl mx-auto">
-        <h1 className="text-2xl py-10">Our Export Product Range</h1>
+        <h1 className="text-2xl py-10">Component Categories</h1>
         <ul className="grid gap-11 sm:grid-cols-1 md-sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
           {data.length > 0 &&
             data.map (postdata => {

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, {Fragment} from 'react';
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 
 setTimeout (() => {
 
@@ -38,6 +38,21 @@ const Menu = () => {
       });
       
   }, []);
+  
+  
+    // Create a ref to store the parent element
+    const parentRef = useRef(null);
+  
+    const handleButtonClick = () => {
+      // Accessing the child element
+     
+      const childElement = parentRef.current.children[2].childNodes[1];
+      alert('childElement', childElement);
+      // Modifying the innerHTML of the child element
+      if (childElement) {
+        childElement.innertext = "Componentssateesh";
+      }
+    };
 
   return (
     <Fragment>
@@ -46,14 +61,14 @@ const Menu = () => {
           return (
             <Fragment>
               <nav className="flex items-center gap-5 sm:hidden lg:flex">
-                <ul className="flex items-center gap-14 main-menu">
+                <ul className="flex items-center gap-14 main-menu" key={1} ref={parentRef}>
                   {postdata.menu.map ((item, index) => {
                     return (
-                      <li>
+                      <li key={index + 1} id={index + 1}>
                         <Link className="fb" href={item.link}>{item.name}</Link>
-                        <ul className="hidden" key={index}>
+                        <ul className="hidden" key={3}>
                           {item.submenu.map (sub => (
-                            <li key={index}>
+                            <li key={4}>
                               <Link className="fb" href={sub.link}>
                                 {sub.name}
                               </Link>
@@ -66,8 +81,8 @@ const Menu = () => {
                   })}
                 </ul>
               </nav>
-
-              <button onClick={ () =>{ setShow (!show);addprodText()}}
+                 
+              <button  onClick={ () =>{ setShow (!show);handleButtonClick()}} 
                 data-collapse-toggle="navbar-default"
                 type="button"
                 className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -91,10 +106,10 @@ const Menu = () => {
                   />
                 </svg>
               </button>
-              
+             
               {show &&
               <div className="md:hidden w-full md:block md:w-auto ab-mobileMenu p-6">
-                <ul className="gap-y-2 flex flex-col items-left">
+                <ul  className="gap-y-2 flex flex-col items-left">
                   {postdata.menu.map ((item, index) => {
                     return (
                       <li key={index}>
@@ -123,3 +138,9 @@ const Menu = () => {
 };
 
 export default Menu;
+
+
+
+
+
+

@@ -16,7 +16,7 @@ const ExportProducts = () => {
     <Fragment>
       <section className="max-w-6xl mx-auto">
         <h1 className="text-lg py-10 font-semibold">Semiconductors - Components</h1>
-        <ul role="list" className="gap-x-4 sm:columns-1 md-sm:columns-2 md:columns-3 components">
+        <ul role="list" className="gap-x-4 sm:columns-1 md-sm:columns-2 md:columns-3 components pb-6 brd-grey">
           {data.length > 0 &&
             data.map (postdata => {
               return postdata.semiconductors.components.map (item => {
@@ -29,8 +29,8 @@ const ExportProducts = () => {
             })}
         </ul>
 
-        <div className='mt-14 mt-20 my-40'>
-          <h1 className="text-lg  font-semibold">Manufacturers/OEMs</h1>
+        <div className='py-12 mb-40'>
+          <h2 className='font-semibold mb-4'>Manufacturers/OEMs</h2>
         <marquee 
  scrollamount="16" behavior="alternate" direction="left"> 
         <ul className='flex scroll-img'>

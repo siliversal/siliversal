@@ -4,10 +4,7 @@ import React from 'react';
 import {useEffect, useState, useRef} from 'react';
 import './hero.css';
 
-setTimeout(()=>{
-  let imgHeight = document.querySelector(".slideshowSlider .slide").offsetHeight;
-console.log("imgHeight", `${imgHeight}px`);
-},500);
+
 
 const Slideshow = () => {
  

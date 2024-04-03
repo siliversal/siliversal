@@ -15,10 +15,9 @@ export default function About () {
           <div className='sm:w-full md:w-3/5'>
             <h1 className='text-2xl py-6 pb-4 font-medium drop-shadow-lg'><span className="font-bold blueText">SILIVERSAL</span> - Professionally Executed <br/> Exports and Imports</h1>
             <p className='text-sm pt-3'>
-            <span className='text-sm font-semibold'>WELCOME TO SILIVERSAL,</span> Your trusted and reliable partner in Global Trade. With an extensive network of agriculture producers, SILIVERSAL is an exporter of Vegetables, Fruits, Spices, and Processed Food Products.
-            <br/><br/>
-            SILIVERSAL also specialized in export of a wide variety of Handmade Toys and Handicrafts produced by skilled artisans across India.<br/><br/>
-            
+            <span className='text-sm font-semibold'>WELCOME TO SILIVERSAL,</span> 
+            Siliversal Electronics, a distinguished player in the realm of importing, stocking, and distributing industry-standard electronic components. With a strategic focus on unlocking the potential of the Indian market, we stand as a reliable partner committed to delivering quality components swiftly and at competitive prices. <br></br><br></br>
+At Siliversal Electronics, our foundation is uncompromising quality. We meticulously select and vet every component in our inventory to ensure they meet and exceed industry standards. Our dedication to quality assurance guarantees optimal performance, reliability, and longevity for our customers' projects and products. 
             </p>
           </div>
           <div className='sm:w-full md:w-3/5 pt-12'>

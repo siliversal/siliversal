@@ -1,10 +1,16 @@
-import React, {Fragment} from 'react';
+'use client'
+
+import React, {Fragment, useState} from 'react';
 import Header from '../Components/header/header';
 import Footer from '../Components/footer/footer';
 import Subbanner from '../Components/sub-banner/sub-banner';
 import ContactForm from '../Components/contact-form/contact-form';
 
 export default function About () {
+  const [email, setEmail] = useState('contact@siliversal.com');
+  const copyEmailToClipboard = () => {
+    navigator.clipboard.writeText(email);
+  }
   return (
     <Fragment>
       <Header />
@@ -20,7 +26,7 @@ export default function About () {
               INDIA
               <br />
               <br />
-              <b>Email:</b> contact@siliversal.com<br />
+              <b className='float-left pr-1'>Email:</b><span className='float-left' >{email}</span> <i class="fa-solid fa-copy float-left copy" onClick={copyEmailToClipboard}><img src='./images/copy-black.png'/></i><br />
               <b>Phone:</b> +91 7483433274 <br />
               </div>
           </div>
